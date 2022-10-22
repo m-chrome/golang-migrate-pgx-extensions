@@ -8,6 +8,7 @@ require (
 	github.com/jackc/pgconn v1.13.0
 	github.com/jackc/pgerrcode v0.0.0-20220416144525-469b46aa5efa
 	github.com/jackc/pgx/v4 v4.17.2
+	github.com/jackc/pgx/v5 v5.0.3
 	go.uber.org/atomic v1.10.0
 )
 
