@@ -1,3 +1,3 @@
-module github.com/m-chrome/golang-migrate-pgx-extensions
+module github.com/m-chrome/migrate-extensions
 
 go 1.18
