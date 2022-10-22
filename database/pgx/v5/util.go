@@ -16,6 +16,7 @@ func quoteIdentifier(name string) string {
 
 const newLine = '\n'
 
+// Copied from golang-migrate/migrate
 func runesCount(input []rune, target rune) int {
 	var count int
 	for _, r := range input {
@@ -26,6 +27,7 @@ func runesCount(input []rune, target rune) int {
 	return count
 }
 
+// Copied from golang-migrate/migrate
 func runesLastIndex(input []rune, target rune) int {
 	for i := len(input) - 1; i >= 0; i-- {
 		if input[i] == target {
@@ -35,6 +37,7 @@ func runesLastIndex(input []rune, target rune) int {
 	return -1
 }
 
+// Copied from golang-migrate/migrate
 func computeLineFromPos(s string, pos int) (line uint, col uint, ok bool) {
 	// replace crlf with lf
 	s = strings.Replace(s, "\r\n", "\n", -1)
