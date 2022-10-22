@@ -11,7 +11,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/golang-migrate/migrate/v4"
 	"github.com/golang-migrate/migrate/v4/database"
 	"github.com/golang-migrate/migrate/v4/database/multistmt"
 	"github.com/hashicorp/go-multierror"
@@ -139,7 +138,7 @@ func (p *Postgres) Open(url string) (database.Driver, error) {
 	// i.e. pgx://user:password@host:port/db => postgres://user:password@host:port/db
 	purl.Scheme = "postgres"
 
-	db, err := sql.Open("pgx", migrate.FilterCustomQuery(purl).String())
+	db, err := sql.Open("pgx", filterCustomQuery(purl).String())
 	if err != nil {
 		return nil, err
 	}
